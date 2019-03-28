@@ -1,10 +1,12 @@
 export default class Game{
     constructor(){
       this.TileCount = 30;
+      this.InitScore = 2048 + this.TileCount;
+
       this.completedTiles = 0;
       this.flippedBlock =null;
       this.flips = 0;
-      this.score = 0;
+      this.score = this.InitScore ;
       this.rotateTransitionClass = ["rotate1", "rotate2", "rotate3", "rotate4"];
     }
     flip(block){
@@ -21,8 +23,7 @@ export default class Game{
        {
            this.flippedBlock.classList.add('disappear');
            block.classList.add('disappear');
-           this.score = this.score == 0 ? 1 : this.score;
-           this.score += 1;
+           this.score += 50;
            this.completedTiles +=2;
            this.flippedBlock = null;
            this.gameOver = (this.TileCount == this.completedTiles);

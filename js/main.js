@@ -19,11 +19,14 @@ window.onload = ()=>{
 
         document.getElementById("time_elapsed").innerText = timer.elaspsedTimeString;
         document.getElementById("blocks_flipped").innerText = game.flips;
+        var timepenalty = (60 - timer.timeElapsed);
+        timepenalty = timepenalty > 0 ? 0 : timepenalty;
+        game.score = game.InitScore - (game.flips) - timepenalty;
         document.getElementById("score").innerText = game.score;
+
 
         if(game.gameOver){
             timer.stop();
-            game.score += ((256 - game.flips) + (128 - timer.timeElapsed));
             document.getElementById("score").innerText = game.score;
             document.getElementById('playAgain').style.display = 'block';
 
