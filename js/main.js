@@ -5,10 +5,6 @@ const imageDataUrl = "./js/data/images.json";
 var highScore;
 window.onload = ()=>{
 
-    document.getElementById('playAgain').addEventListener("click",()=>{location.reload()});
-    document.getElementById('playAgain').addEventListener("ontouchstart",()=>{location.reload()});
-
-
     if (window.localStorage) {
         highScore = localStorage.getItem('blocks-high-score');
         highScore = highScore ? highScore :0;
@@ -86,5 +82,6 @@ function loadBlocks(blocks)
     
     document.getElementsByTagName('game-board')[0].innerHTML += blocks.map(block_template_format)
                                                                   .join('');
+    document.getElementById('playAgain').addEventListener("click",()=>{location.reload()});
                                                                   
 }

@@ -188,8 +188,9 @@ h1{
   margin: 0;
   text-align: center;
 }
-img#playAgain {
+#playAgain {
   margin: auto;
+  text-align: center;
   align-self: center;
   display: none;
   cursor: pointer;
