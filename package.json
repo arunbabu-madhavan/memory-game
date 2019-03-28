@@ -1,0 +1,18 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "description": "memory blocks game",
+  "main": "index.js",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "serve": "^10.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve ./"
+  },
+  "author": "Arun",
+  "license": "ISC"
+}
