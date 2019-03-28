@@ -6,6 +6,8 @@ var highScore;
 window.onload = ()=>{
 
     document.getElementById('playAgain').addEventListener("click",()=>{location.reload()});
+    document.getElementById('playAgain').addEventListener("ontouchstart",()=>{location.reload()});
+
 
     if (window.localStorage) {
         highScore = localStorage.getItem('blocks-high-score');
