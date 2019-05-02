@@ -16,7 +16,8 @@ export default class StopWatch{
     }
     get elaspsedTimeString(){
         const diff = this.timeElapsed;
-        return ((diff/360) >= 1 ? Math.floor((diff/3600)).toString().padStart(2,"0") +" : " : "" )+ (Math.floor((diff/60)%60)).toString().padStart(2,"0") 
+        return ((diff/360) >= 1 ? Math.floor((diff/3600)).toString()
+        .padStart(2,"0") +" : " : "" )+ (Math.floor((diff/60)%60)).toString().padStart(2,"0") 
                     + " : " 
                         +(diff%60).toString().padStart(2,"0") ;
     }

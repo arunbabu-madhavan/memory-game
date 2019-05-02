@@ -19,7 +19,7 @@ window.onload = ()=>{
 
         document.getElementById("time_elapsed").innerText = timer.elaspsedTimeString;
         document.getElementById("blocks_flipped").innerText = game.flips;
-        var timepenalty = (60 - timer.timeElapsed);
+        var timepenalty = (120 - timer.timeElapsed);
         timepenalty = timepenalty > 0 ? 0 : timepenalty;
         game.score = game.InitScore - (game.flips) - timepenalty;
         document.getElementById("score").innerText = game.score;
